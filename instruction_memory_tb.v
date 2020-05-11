@@ -12,7 +12,7 @@ begin
     for(i = 0; i < 8'h32; i = i+1)
         begin
             #20 pc = pc+2;
-            $monitor("Mem Address=%h instruction=%b",pc,instr);
+            $monitor("Mem Address=%h instruction=%b",pc,instruction);
         end
 end
 
