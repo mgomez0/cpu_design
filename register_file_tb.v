@@ -16,10 +16,10 @@ always
 initial
 begin
     clk = 0;
-    reset = 1;
+    rst = 1;
     reg_read_addr_1 = 0;
     reg_read_addr_2 = 0;
-    #10 reset = 0;
+    #10 rst = 0;
     for(i = 0; i < 8'h32; i = i+1)
         begin
             $monitor("Reading port 1... Register %h: %h", i, reg_read_data_1);
