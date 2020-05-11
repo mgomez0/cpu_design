@@ -8,5 +8,5 @@
       begin  
                 $readmemh("myHexFile.hex", rom, 0, 49);
       end  
-      assign instruction = {rom[rom_addr+1],rom[rom_addr]};  
+      assign instruction = (pc < 16'h32 ?  {rom[rom_addr+1],rom[rom_addr]} : 16'h0);  
  endmodule   
