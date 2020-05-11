@@ -1,3 +1,4 @@
+ `timescale 1ns / 1ns
  module instr_mem(pc, instruction);  
       input     [15:0]         pc;  
       output wire     [15:0]   instruction;
