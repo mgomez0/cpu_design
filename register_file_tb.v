@@ -24,8 +24,8 @@ begin
     
     for(i = 0; i < 4'hF; i = i+1)
         begin
-            $display("Reading port 1... Register %h: %h", i, reg_read_data_1);
-            $display("Reading port 2... Register %h: %h", i, reg_read_data_2);
+            $display("Reading port 1... Register %d: %h", i, reg_read_data_1);
+            $display("Reading port 2... Register %d: %h", i, reg_read_data_2);
             #40 reg_read_addr_1 = reg_read_addr_1 + 1; reg_read_addr_2 = reg_read_addr_2 + 1;
         end
     
