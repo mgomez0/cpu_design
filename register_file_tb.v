@@ -20,12 +20,16 @@ begin
     reg_read_addr_1 = 0;
     reg_read_addr_2 = 0;
     #10 rst = 0;
-    for(i = 0; i < 8'h32; i = i+1)
+    
+    for(i = 0; i < 4'hF; i = i+1)
         begin
-            $monitor("Reading port 1... Register %h: %h", i, reg_read_data_1);
-            $monitor("Reading port 2... Register %h: %h", i, reg_read_data_2);
+            $display("Reading port 1... Register %h: %h", i, reg_read_data_1);
+            $display("Reading port 2... Register %h: %h", i, reg_read_data_2);
             #20 reg_read_addr_1 = reg_read_addr_1 +1; reg_read_addr_2 = reg_read_addr_2 + 1;
         end
+    
+    #20 $stop;
+    
 end
 
 
