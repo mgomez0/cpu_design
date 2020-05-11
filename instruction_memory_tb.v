@@ -1,8 +1,8 @@
 `timescale 1ns / 1ns
 module instruction_memory_tb;
 
-reg pc
-wire instruction
+reg pc;
+wire instruction;
 integer i;
 instr_mem u1(pc, instruction);
 
