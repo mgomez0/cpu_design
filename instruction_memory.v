@@ -6,7 +6,7 @@
       reg [7:0] rom[65535:0];  
       initial  
       begin  
-                $readmemh("final_project/myHexFile.hex", rom, 0, 49);
+                $readmemh("myHexFile.hex", rom, 0, 49);
       end  
       assign instruction = {rom[rom_addr+1],rom[rom_addr]};  
  endmodule   
