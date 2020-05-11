@@ -26,7 +26,8 @@ begin
         begin
             $display("Reading port 1... Register %d: %h", i, reg_read_data_1);
             $display("Reading port 2... Register %d: %h", i, reg_read_data_2);
-            #5 reg_read_addr_1 = reg_read_addr_1 + 1; reg_read_addr_2 = reg_read_addr_2 + 1;
+            #2 reg_read_addr_1 = reg_read_addr_1 + 1; 
+            #2 reg_read_addr_2 = reg_read_addr_2 + 1;
         end
     
     #20 $stop;
