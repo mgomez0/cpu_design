@@ -15,6 +15,7 @@ always
 
 initial
 begin
+    i = 0;
     clk = 0;
     rst = 1;
     reg_read_addr_1 = 0;
