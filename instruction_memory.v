@@ -1,4 +1,4 @@
- module instr_mem(pc instruction);  
+ module instr_mem(pc, instruction);  
       input     [15:0]         pc;  
       output wire     [15:0]   instruction;
       wire [3 : 0] rom_addr = pc[3 : 0];  
