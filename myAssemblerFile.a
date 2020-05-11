@@ -1,0 +1,27 @@
+
+add r1, r2
+sub r1, r2
+or r3, r4
+and r3, r2
+mul r5, r6
+div r1, r5
+sub r0, r0
+sll r4, 3
+slr r4, 2
+ror r6, 3
+rol r6, 2
+beq r7, 4
+add r11, r1
+blt r7, 5
+add r11, r2
+bgt r7, 2
+add r1, r1
+add r1, r1
+lw r8, 0(r9)
+add r8, r8
+sw r8, 2 (r9)
+lw r10, 2 (r9)
+add r12, r12
+sub r13, r13
+add r12, r13
+ffff
