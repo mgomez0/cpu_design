@@ -9,7 +9,7 @@ instr_mem u1(pc, instruction);
 initial
 begin
     pc = 0;
-    for(i = 0; i < 8'h32; i = i+1)
+    for(i = 0; i < 8'h18; i = i+1)
         begin
             $monitor("Mem Address=%h instruction=%h",pc,instruction);
             #20 pc = pc + 2'h2;

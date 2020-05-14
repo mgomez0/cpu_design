@@ -20,6 +20,10 @@ begin
     rst = 1;
     reg_read_addr_1 = 0;
     reg_read_addr_2 = 0;
+    reg_write_en = 0;
+    reg_write_data = 16'h0666;
+    reg_write_dest = 16'h0002;
+
     #10 rst = 0;
     
     for(i = 0; i < 4'hF; i = i+1)
@@ -28,9 +32,12 @@ begin
             $display("Reading port 2... Register %d: %h", i, reg_read_data_2);
             #2 reg_read_addr_1 = reg_read_addr_1 + 1; 
             #2 reg_read_addr_2 = reg_read_addr_2 + 1;
+            #20;
         end
-    
-    #20 $stop;
+    reg_write_en = 1;
+    #40 reg_write_en = 0; reg_read_addr_1 = 16'h0002;
+    $display("Display written value: %h", reg_read_data_1); 
+    #40 $stop;
 
 end
 

@@ -39,7 +39,7 @@
            end  
            else begin  
                 if(reg_write_en) begin  
-                     reg_array[reg_write_dest] <= reg_write_data;  
+                     reg_array[reg_write_dest] <= reg_write_data;
                 end  
            end  
       end  
